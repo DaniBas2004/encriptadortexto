@@ -1,0 +1,321 @@
+/* Variables */
+:root {
+    --color-primario: blueviolet;
+    --color-secundario: rgb(255, 255, 255);
+    --Font: white;
+    --Dark-Blue: blue;
+    --Greey:#C5C5C5;
+    --RGBA:rgba(0,0,0,0.8);
+}
+
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+/* Global CSS */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Kalam", cursive;
+    font-weight: 300;
+    font-style: normal;
+    text-decoration: none;
+    background: white;
+}
+::selection{
+    background: black;
+    color: white;
+}
+body{
+    height: 100%;
+}
+img{
+    max-width: 100%;
+}
+
+/* Encabezado CSS */
+header{
+    position: absolute;
+    margin: 40px 0px 0px 40px;
+}
+header .logo{
+    display: flex;
+    align-items: flex-start;
+    width: 120px;
+    height: 48px;
+}
+
+/* Principal CSS */
+main{
+    display: flex;
+    flex-direction: row;
+    background: url(./multimedia/portada.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.encriptador{
+    width: 60%;
+    margin: 168px 0px 0px 140px;
+    background: transparent;
+}
+.encriptar{
+    width: 660px;
+    height: 288px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    outline: none;
+    border: 1px solid grey;
+    border-radius: 15px;
+    resize: none;
+}
+.encriptador ::placeholder,:focus{
+color: rgb(75, 75, 75);
+}
+.encriptador-aviso{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 8px;
+    position: absolute;
+    top: 500px;
+}
+.texto-aviso{
+    width: 100%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    opacity: 0.8;
+    color: rgb(51, 51, 51);
+}
+.contenedor-encriptador{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 8px;
+    position: absolute;
+    top: 526px;
+}
+.btn-encriptar{
+    width: 328px;
+    height: 67px;
+    padding: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: white;
+    background: blue;
+    border: 1px solid black;
+    border-radius: 24px;
+    cursor: pointer;
+    box-shadow: 0px 15px 6px -8px rgb(51, 51, 51);
+}
+.btn-encriptar:active{
+    box-shadow: inset 2px 2px 4px black;
+    inset: -3px -4px 8px var(--Dark-Blue);
+    color: white;
+    background: blue;
+}
+.btn-desencriptar{
+    width: 328px;
+    height: 67px;
+    padding: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: black;
+    background: white;
+    border: 1px solid gray;
+    border-radius: 24px;
+    cursor: pointer;
+    box-shadow: 0px 15px 6px -8px rgb(51, 51, 51);
+}
+.btn-copiar:active,
+.btn-desencriptar:active{
+    box-shadow: inset 2px 2px 4px black;
+    inset: -3px -4px 8px white;
+    color: black
+}
+.cajatarjeta{
+    width: 270px;
+    height: 580px;
+    background: white;
+    box-shadow: 10px 24px 32px -8px grey;
+    position: relative;
+    margin-top: 40px;
+    border-radius: 32px;
+    text-align: center;
+}
+.contenedor-tarjeta{
+    width: 250px;
+    margin: auto;
+    margin-top: 50%;
+    background: white;
+}
+.imagen-muñeco{
+    background: white;
+}
+.texto-1{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 120%;
+    text-align: center;
+    color: grey;
+    background: white; 
+}
+.texto-2{
+    font-style: normal;
+    font-weight: 400px;
+    font-size: 12px;
+    line-height: 150%;
+    text-align: center;
+    color: grey;
+    background: white;
+}
+
+.evaluar{
+    width: 100%;
+    height: 485px;
+    position: absolute;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: black;
+    background: transparent;
+    border-top-right-radius: 32px;
+    border-top-left-radius: 32px;
+    border: none;
+    resize: none;
+}
+.evaluar:focus{
+    outline: none;
+}
+.btn-copiar{
+    width: 224px;
+    height: 67px;
+    margin: 23px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden; 
+    padding: 24px;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    background: rgb(206, 205, 205);
+    border: 1px solid black;
+    color: black;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.btn-desencriptar:hover,
+.btn-encriptar:hover,
+.btn-copiar:hover{
+    transform: scale(0.97);
+}
+
+/* pie de Pag CSS */
+footer{
+    margin-top: 15px;
+    padding: 10px;
+    border-top: 2px solid white;
+    color: black;
+    text-align: center;
+    height: 5px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.linked:hover{
+    color: white;
+    opacity: 0.5;
+}
+.github:hover{
+    color: white;
+    opacity: 0.6;
+}
+
+/* Responsive */
+@media(max-width: 1250px){
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .encriptador{
+        margin: 168px 0px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .contenedor-encriptador{
+        display: flex;
+        align-items: center;
+        position: inherit;
+    }
+    .encriptador-aviso{
+        position: inherit;
+        margin: 15px;
+    }
+    .cajatarjeta{
+        width: 665px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .contenedor-tarjeta{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        bottom: 40%;
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .imagen-muñeco{
+        display: none;
+    }
+    .btn-copiar{
+        position: inherit;
+        width: 100%;
+    }
+    .evaluar{
+        width: 100%;
+        height: 210px;
+        padding: 10px;
+    }
+}
+@media(max-width: 720px){
+    header .logo{
+        width: 100%;
+        background: transparent;
+        padding: 2px;
+    }
+    .encriptar{
+        width: 90%;
+        font-size: 24px;
+    }
+    .contenedor-encriptador{
+        display: grid;
+        gap: 21px;
+    }
+    .cajatarjeta{
+        width: 90%;
+    }
+    .copyright{
+        font-size: 20px;
+    }
+}
